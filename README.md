@@ -29,6 +29,10 @@ __기한: ~2020.04.24(금)__
 
 </br>
 
+> present된 VC를 dismiss한 후
+AppDelegate의 rootVC에 접근하고
+그 rootVC의 NavigationController에 접근해서
+VC를 pop해주는 코드
 ``` swift
     @IBAction func logoutClick(_ sender: Any) {
         // present -> dismiss, push -> pop
@@ -39,6 +43,13 @@ __기한: ~2020.04.24(금)__
         }
     }
 ```
+
+<br>
+
+> ## AppDelegate
+
+* AppDelegate클래스가 만들어지고, 이 AppDelegate클래스 인스턴스인 delegate가 앱 내용이 그려질 창(window)을 만듬
+* 앱의 입력 이벤트를 전달하는 run loop를 생성 
 
 <br>
 
