@@ -24,7 +24,7 @@
 __기한: ~2020.04.24(금)__
 
 <div>
-<img src="./READMEIMG/1차과제.png" width="250" height="450">
+<img src="./READMEImg/1차과제.png" width="250" height="450">
 </div>
 
 </br>
@@ -39,3 +39,11 @@ __기한: ~2020.04.24(금)__
         }
     }
 ```
+
+<br>
+
+<br>
+
+## 2차 
+
+__기한:  __
