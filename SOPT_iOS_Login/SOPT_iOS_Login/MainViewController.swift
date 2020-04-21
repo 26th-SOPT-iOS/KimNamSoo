@@ -40,7 +40,7 @@ extension UIButton {
         super.awakeFromNib()
         // UIButton의 tag가 1인경우 둥글게
         if self.tag == 1{
-            self.layer.cornerRadius = self.frame.height/2
+            self.layer.cornerRadius = 10
         }
     }
 }

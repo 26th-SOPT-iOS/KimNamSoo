@@ -7,7 +7,9 @@
 
 | 제목 | 내용 | 날짜 | 비고 |
 | - | - | - | - |
-| 1차 세미나 | 기본 컴포넌트, VC간 이동 | 2020.04.18(토) | |
+| 1차 세미나 | 기본 컴포넌트 | 2020.04.18(토) | |
+| [1차 과제1](#1차 과제1) | VC간 이동 | 2020.04.18(토) | |
+| [1차 과제2](#1차 과제2) | 로그인 뷰 디자인, flow | 2020.04.18(토) | |
 | 2차 세미나 |  |  | |
 | 3차 세미나 |  |  | |
 | 4차 세미나 |  |  | |
@@ -19,12 +21,29 @@
 
 <br>
 
-## 1차 과제
+## 1차 과제1
+
+__기한: ~2020.04.24(금)__
+
+* 클릭시 NavigationController를 이용한 화면전환
+
+<div>
+<img src="./READMEImg/1차과제1_1.png" width="250" height="450">
+<img src="./READMEImg/1차과제1_2.png" width="250" height="450">
+</div>
+
+<br>
+
+<br>
+
+## 1차 과제2
 
 __기한: ~2020.04.24(금)__
 
 <div>
-<img src="./READMEImg/1차과제.png" width="250" height="450">
+<img src="./READMEImg/1차과제2_1.png" width="250" height="450">
+<img src="./READMEImg/1차과제2_2.png" width="250" height="450">
+<img src="./READMEImg/1차과제2_3.png" width="250" height="450">
 </div>
 
 </br>
