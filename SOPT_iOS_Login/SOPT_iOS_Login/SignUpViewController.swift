@@ -15,11 +15,7 @@ class SignUpViewController: UIViewController {
         
     }
     
-    @IBAction func signUpClick(_ sender: Any) {
-        guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginViewController else {
-            return
-        }
-        
-        present(nextVC, animated: true)
+    @IBAction func signUpCompleteClick(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
 }
