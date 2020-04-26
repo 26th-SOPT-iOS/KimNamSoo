@@ -7,31 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0627BBD12455DCEA0054A19C /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0627BBD02455DCEA0054A19C /* UILabel+Extension.swift */; };
-		066BB826244ACD7200C607CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066BB825244ACD7200C607CC /* AppDelegate.swift */; };
-		066BB82A244ACD7200C607CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066BB829244ACD7200C607CC /* MainViewController.swift */; };
-		066BB82D244ACD7200C607CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 066BB82B244ACD7200C607CC /* Main.storyboard */; };
-		066BB82F244ACD7200C607CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 066BB82E244ACD7200C607CC /* Assets.xcassets */; };
-		066BB832244ACD7200C607CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 066BB830244ACD7200C607CC /* LaunchScreen.storyboard */; };
-		066BB83A244B0C1100C607CC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066BB839244B0C1100C607CC /* LoginViewController.swift */; };
-		066BB83C244B0C1A00C607CC /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066BB83B244B0C1A00C607CC /* SignUpViewController.swift */; };
+		0627BBBD2453FF240054A19C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0627BBBC2453FF240054A19C /* AppDelegate.swift */; };
+		0627BBBF2453FF240054A19C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0627BBBE2453FF240054A19C /* SceneDelegate.swift */; };
+		0627BBC12453FF240054A19C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0627BBC02453FF240054A19C /* ViewController.swift */; };
+		0627BBC42453FF240054A19C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0627BBC22453FF240054A19C /* Main.storyboard */; };
+		0627BBC62453FF270054A19C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0627BBC52453FF270054A19C /* Assets.xcassets */; };
+		0627BBC92453FF270054A19C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0627BBC72453FF270054A19C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0627BBD02455DCEA0054A19C /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
-		066BB822244ACD7200C607CC /* SOPT_iOS_Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOPT_iOS_Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		066BB825244ACD7200C607CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		066BB829244ACD7200C607CC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		066BB82C244ACD7200C607CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		066BB82E244ACD7200C607CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		066BB831244ACD7200C607CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		066BB833244ACD7200C607CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		066BB839244B0C1100C607CC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		066BB83B244B0C1A00C607CC /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0627BBB92453FF240054A19C /* SOPT_iOS_02TH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOPT_iOS_02TH.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0627BBBC2453FF240054A19C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0627BBBE2453FF240054A19C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0627BBC02453FF240054A19C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0627BBC32453FF240054A19C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0627BBC52453FF270054A19C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0627BBC82453FF270054A19C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0627BBCA2453FF270054A19C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		066BB81F244ACD7200C607CC /* Frameworks */ = {
+		0627BBB62453FF240054A19C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,74 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		066BB819244ACD7200C607CC = {
+		0627BBB02453FF240054A19C = {
 			isa = PBXGroup;
 			children = (
-				066BB824244ACD7200C607CC /* SOPT_iOS_Login */,
-				066BB823244ACD7200C607CC /* Products */,
+				0627BBBB2453FF240054A19C /* SOPT_iOS_02TH */,
+				0627BBBA2453FF240054A19C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		066BB823244ACD7200C607CC /* Products */ = {
+		0627BBBA2453FF240054A19C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				066BB822244ACD7200C607CC /* SOPT_iOS_Login.app */,
+				0627BBB92453FF240054A19C /* SOPT_iOS_02TH.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		066BB824244ACD7200C607CC /* SOPT_iOS_Login */ = {
+		0627BBBB2453FF240054A19C /* SOPT_iOS_02TH */ = {
 			isa = PBXGroup;
 			children = (
-				066BB825244ACD7200C607CC /* AppDelegate.swift */,
-				066BB82B244ACD7200C607CC /* Main.storyboard */,
-				066BB829244ACD7200C607CC /* MainViewController.swift */,
-				066BB839244B0C1100C607CC /* LoginViewController.swift */,
-				066BB83B244B0C1A00C607CC /* SignUpViewController.swift */,
-				0627BBD02455DCEA0054A19C /* UILabel+Extension.swift */,
-				066BB82E244ACD7200C607CC /* Assets.xcassets */,
-				066BB830244ACD7200C607CC /* LaunchScreen.storyboard */,
-				066BB833244ACD7200C607CC /* Info.plist */,
+				0627BBBC2453FF240054A19C /* AppDelegate.swift */,
+				0627BBBE2453FF240054A19C /* SceneDelegate.swift */,
+				0627BBC02453FF240054A19C /* ViewController.swift */,
+				0627BBC22453FF240054A19C /* Main.storyboard */,
+				0627BBC52453FF270054A19C /* Assets.xcassets */,
+				0627BBC72453FF270054A19C /* LaunchScreen.storyboard */,
+				0627BBCA2453FF270054A19C /* Info.plist */,
 			);
-			path = SOPT_iOS_Login;
+			path = SOPT_iOS_02TH;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		066BB821244ACD7200C607CC /* SOPT_iOS_Login */ = {
+		0627BBB82453FF240054A19C /* SOPT_iOS_02TH */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 066BB836244ACD7200C607CC /* Build configuration list for PBXNativeTarget "SOPT_iOS_Login" */;
+			buildConfigurationList = 0627BBCD2453FF270054A19C /* Build configuration list for PBXNativeTarget "SOPT_iOS_02TH" */;
 			buildPhases = (
-				066BB81E244ACD7200C607CC /* Sources */,
-				066BB81F244ACD7200C607CC /* Frameworks */,
-				066BB820244ACD7200C607CC /* Resources */,
+				0627BBB52453FF240054A19C /* Sources */,
+				0627BBB62453FF240054A19C /* Frameworks */,
+				0627BBB72453FF240054A19C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SOPT_iOS_Login;
-			productName = SOPT_iOS_Login;
-			productReference = 066BB822244ACD7200C607CC /* SOPT_iOS_Login.app */;
+			name = SOPT_iOS_02TH;
+			productName = SOPT_iOS_02TH;
+			productReference = 0627BBB92453FF240054A19C /* SOPT_iOS_02TH.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		066BB81A244ACD7200C607CC /* Project object */ = {
+		0627BBB12453FF240054A19C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "남수김";
 				TargetAttributes = {
-					066BB821244ACD7200C607CC = {
+					0627BBB82453FF240054A19C = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 066BB81D244ACD7200C607CC /* Build configuration list for PBXProject "SOPT_iOS_Login" */;
+			buildConfigurationList = 0627BBB42453FF240054A19C /* Build configuration list for PBXProject "SOPT_iOS_02TH" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,57 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 066BB819244ACD7200C607CC;
-			productRefGroup = 066BB823244ACD7200C607CC /* Products */;
+			mainGroup = 0627BBB02453FF240054A19C;
+			productRefGroup = 0627BBBA2453FF240054A19C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				066BB821244ACD7200C607CC /* SOPT_iOS_Login */,
+				0627BBB82453FF240054A19C /* SOPT_iOS_02TH */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		066BB820244ACD7200C607CC /* Resources */ = {
+		0627BBB72453FF240054A19C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				066BB832244ACD7200C607CC /* LaunchScreen.storyboard in Resources */,
-				066BB82F244ACD7200C607CC /* Assets.xcassets in Resources */,
-				066BB82D244ACD7200C607CC /* Main.storyboard in Resources */,
+				0627BBC92453FF270054A19C /* LaunchScreen.storyboard in Resources */,
+				0627BBC62453FF270054A19C /* Assets.xcassets in Resources */,
+				0627BBC42453FF240054A19C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		066BB81E244ACD7200C607CC /* Sources */ = {
+		0627BBB52453FF240054A19C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				066BB83A244B0C1100C607CC /* LoginViewController.swift in Sources */,
-				066BB82A244ACD7200C607CC /* MainViewController.swift in Sources */,
-				0627BBD12455DCEA0054A19C /* UILabel+Extension.swift in Sources */,
-				066BB826244ACD7200C607CC /* AppDelegate.swift in Sources */,
-				066BB83C244B0C1A00C607CC /* SignUpViewController.swift in Sources */,
+				0627BBC12453FF240054A19C /* ViewController.swift in Sources */,
+				0627BBBD2453FF240054A19C /* AppDelegate.swift in Sources */,
+				0627BBBF2453FF240054A19C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		066BB82B244ACD7200C607CC /* Main.storyboard */ = {
+		0627BBC22453FF240054A19C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				066BB82C244ACD7200C607CC /* Base */,
+				0627BBC32453FF240054A19C /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		066BB830244ACD7200C607CC /* LaunchScreen.storyboard */ = {
+		0627BBC72453FF270054A19C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				066BB831244ACD7200C607CC /* Base */,
+				0627BBC82453FF270054A19C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -174,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		066BB834244ACD7200C607CC /* Debug */ = {
+		0627BBCB2453FF270054A19C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -234,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		066BB835244ACD7200C607CC /* Release */ = {
+		0627BBCC2453FF270054A19C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -288,36 +280,36 @@
 			};
 			name = Release;
 		};
-		066BB837244ACD7200C607CC /* Debug */ = {
+		0627BBCE2453FF270054A19C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7Z2CV7TB8R;
-				INFOPLIST_FILE = SOPT_iOS_Login/Info.plist;
+				INFOPLIST_FILE = SOPT_iOS_02TH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ns.SOPT-iOS-Login";
+				PRODUCT_BUNDLE_IDENTIFIER = "ns.SOPT-iOS-02TH";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		066BB838244ACD7200C607CC /* Release */ = {
+		0627BBCF2453FF270054A19C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7Z2CV7TB8R;
-				INFOPLIST_FILE = SOPT_iOS_Login/Info.plist;
+				INFOPLIST_FILE = SOPT_iOS_02TH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ns.SOPT-iOS-Login";
+				PRODUCT_BUNDLE_IDENTIFIER = "ns.SOPT-iOS-02TH";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -327,25 +319,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		066BB81D244ACD7200C607CC /* Build configuration list for PBXProject "SOPT_iOS_Login" */ = {
+		0627BBB42453FF240054A19C /* Build configuration list for PBXProject "SOPT_iOS_02TH" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				066BB834244ACD7200C607CC /* Debug */,
-				066BB835244ACD7200C607CC /* Release */,
+				0627BBCB2453FF270054A19C /* Debug */,
+				0627BBCC2453FF270054A19C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		066BB836244ACD7200C607CC /* Build configuration list for PBXNativeTarget "SOPT_iOS_Login" */ = {
+		0627BBCD2453FF270054A19C /* Build configuration list for PBXNativeTarget "SOPT_iOS_02TH" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				066BB837244ACD7200C607CC /* Debug */,
-				066BB838244ACD7200C607CC /* Release */,
+				0627BBCE2453FF270054A19C /* Debug */,
+				0627BBCF2453FF270054A19C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 066BB81A244ACD7200C607CC /* Project object */;
+	rootObject = 0627BBB12453FF240054A19C /* Project object */;
 }
