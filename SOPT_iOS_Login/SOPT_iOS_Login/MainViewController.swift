@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+    setNavigationColor()
         signUpLabel.underLine()
     }
     
@@ -28,8 +28,12 @@ class MainViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = .white
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     @IBAction func loginClick(_ sender: Any) {
-        guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginViewController else {
+        guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "ScrollVC") as? ScrollViewController else {
             return
         }
         present(nextVC, animated: true)
