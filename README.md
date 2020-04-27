@@ -104,6 +104,27 @@ navigationController?.navigationBar.backItem?.title = ""
 navigationController?.navigationBar.shadowImage = UIImage()
 ```
 
+> ### Label Custom
+``` swift 
+extension UILabel {
+    func underLine() {
+        guard let text = self.text else {
+            return
+        }
+        let attributedString = NSMutableAttributedString(string: text)
+        attributedString.addAttribute(.underlineStyle, value: 1, range: (text as NSString).range(of: text))
+        
+        self.attributedText = attributedString
+    }
+}
+```
+
+* extension
+  * 기존의 타입을 확장해서 추가하는 개념
+  * 여기서 self는 Label이 됨
+* NSMutableAttributedString을 이용해서 속성추가후 라벨에 적용시켜주기
+
+
 > ### ScrollView Interaction (Parallax Effect)
 
 ``` swift 
