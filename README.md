@@ -80,10 +80,68 @@ VC를 pop해주는 코드
 
 __기한: ~2020.05.02(금)__
 
+<div>
+<img src="./READMEImg/2차과제2_1.png" width="250" height="450">
+<img src="./READMEImg/2차과제2_2.png" width="250" height="450">
+<img src="./READMEImg/2차과제2_3.png" width="250" height="450">
+<img src="./READMEImg/2차과제2_4.png" width="250" height="450">
+</div>
+<br>
 
+> ### NavigationBar Custom속성
+``` swift 
+// 네비게이션 영역 그라데이션색
+navigationController?.navigationBar.backgroundColor = .red
+// 툴바 버튼색
+navigationController?.navigationBar.tintColor = .blue
+// 네비게이션 영역색
+navigationController?.navigationBar.barTintColor = .white
+// 네비게이션 hidden with Animation
+navigationController?.setNavigationBarHidden(false, animated: false)
+// 네비게이션 백버튼 텍스트
+navigationController?.navigationBar.backItem?.title = ""
+// 네비게이션 하단밑줄 제거
+navigationController?.navigationBar.shadowImage = UIImage()
+```
 
+> ### ScrollView Interaction (Parallax Effect)
 
+``` swift 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        scrollView.delegate = self
+        scrollView.contentInsetAdjustmentBehavior = .never
+    }
+```
 
+``` swift 
+extension ScrollViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y < 0.0 {
+            // Scrolling down: Scale
+            imgViewHeightLayout.constant = headerImgHeight - scrollView.contentOffset.y
+        } else {
+            // Scrolling up: Parallax
+            var height = headerImgHeight - scrollView.contentOffset.y
+            height = height > minHeaderImgHeight ? height : minHeaderImgHeight
+            imgViewHeightLayout.constant = height
+        }
+    }
+}
+```
+
+* scrollViewDidScroll - ScrollViewDelegate함수
+  * 스크롤이 되면 실행되는 함수
+* 스크롤뷰의 contentOffset에 따라 이미지가 커지고 작아짐
+* 위로 스크롤시 최소로 보여질 높이정해주기
+
+* contentInsetAdjustmentBehavior
+	* contentInset을 자동을 조정해주는역할
+	* safe area 만큼 inset이 조정됨 (여백이 생김)
+
+</br>
+
+</br>
 
 ## 3차 
 
