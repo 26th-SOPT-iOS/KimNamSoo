@@ -83,9 +83,9 @@ __기한: ~2020.05.02(금)__
 <div>
 <img src="./READMEImg/2차과제2_1.png" width="250" height="450">
 <img src="./READMEImg/2차과제2_2.png" width="250" height="450">
-<img src="./READMEImg/2차과제2_3.png" width="250" height="450">
-<img src="./READMEImg/2차과제2_4.png" width="250" height="450">
+<img src="./READMEImg/2차과제2_3.gif" width="250" height="500">
 </div>
+
 <br>
 
 > ### NavigationBar Custom속성
