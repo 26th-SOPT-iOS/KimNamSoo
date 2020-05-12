@@ -170,7 +170,8 @@ extension ScrollViewController: UIScrollViewDelegate {
 __기한: ~2020.05.15(금)__
 
 > StoryBoard Design
-> <img src="./READMEImg/3차과제1.png" width="200" height="450">
+
+<img src="./READMEImg/3차과제1.png" width="200" height="450">
 
 HeaderView(프로필), Cell1(친구 수), Cell2(친구목록) 로 구성
 
@@ -296,6 +297,8 @@ func fetchSampleData() {
 ```
 
 위의 함수 대신에 ‼️ iOS11부터 `UISwipeActionsConfiguration`를 이용한 slide동작 구현가능‼️
+
+Swipe기능 Custom가능
 
 ``` swift
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
