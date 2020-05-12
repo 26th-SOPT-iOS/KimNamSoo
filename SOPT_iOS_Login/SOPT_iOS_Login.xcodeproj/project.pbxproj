@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0627BBD12455DCEA0054A19C /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0627BBD02455DCEA0054A19C /* UILabel+Extension.swift */; };
+		0631934E246A899E009144BB /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0631934D246A899E009144BB /* FriendViewController.swift */; };
+		06319352246A8D5C009144BB /* MockFriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06319351246A8D5C009144BB /* MockFriendModel.swift */; };
+		06319354246A9107009144BB /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06319353246A9107009144BB /* FriendTableViewCell.swift */; };
+		06319356246A9148009144BB /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06319355246A9148009144BB /* HeaderTableViewCell.swift */; };
 		066BB826244ACD7200C607CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066BB825244ACD7200C607CC /* AppDelegate.swift */; };
 		066BB82A244ACD7200C607CC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066BB829244ACD7200C607CC /* MainViewController.swift */; };
 		066BB82D244ACD7200C607CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 066BB82B244ACD7200C607CC /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 
 /* Begin PBXFileReference section */
 		0627BBD02455DCEA0054A19C /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		0631934D246A899E009144BB /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
+		06319351246A8D5C009144BB /* MockFriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFriendModel.swift; sourceTree = "<group>"; };
+		06319353246A9107009144BB /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		06319355246A9148009144BB /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		066BB822244ACD7200C607CC /* SOPT_iOS_Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SOPT_iOS_Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		066BB825244ACD7200C607CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		066BB829244ACD7200C607CC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +49,103 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06319343246A8815009144BB /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				06319349246A889E009144BB /* Splash */,
+				06319345246A8822009144BB /* Main */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		06319344246A881C009144BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				06319350246A8D18009144BB /* Cell */,
+				06319347246A8841009144BB /* StoryBoard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		06319345246A8822009144BB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				0631934F246A8D13009144BB /* Model */,
+				06319344246A881C009144BB /* Views */,
+				066BB829244ACD7200C607CC /* MainViewController.swift */,
+				066BB839244B0C1100C607CC /* ScrollViewController.swift */,
+				066BB83B244B0C1A00C607CC /* SignUpViewController.swift */,
+				0631934D246A899E009144BB /* FriendViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		06319347246A8841009144BB /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				066BB82B244ACD7200C607CC /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		06319348246A8848009144BB /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				066BB825244ACD7200C607CC /* AppDelegate.swift */,
+				066BB82E244ACD7200C607CC /* Assets.xcassets */,
+				066BB833244ACD7200C607CC /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		06319349246A889E009144BB /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				0631934A246A88A6009144BB /* Views */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		0631934A246A88A6009144BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0631934B246A88BA009144BB /* StoryBoard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0631934B246A88BA009144BB /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				066BB830244ACD7200C607CC /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		0631934C246A88D5009144BB /* GlobalExtension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GlobalExtension;
+			sourceTree = "<group>";
+		};
+		0631934F246A8D13009144BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		06319350246A8D18009144BB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				06319351246A8D5C009144BB /* MockFriendModel.swift */,
+				06319353246A9107009144BB /* FriendTableViewCell.swift */,
+				06319355246A9148009144BB /* HeaderTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		066BB819244ACD7200C607CC = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +165,10 @@
 		066BB824244ACD7200C607CC /* SOPT_iOS_Login */ = {
 			isa = PBXGroup;
 			children = (
-				066BB825244ACD7200C607CC /* AppDelegate.swift */,
-				066BB82B244ACD7200C607CC /* Main.storyboard */,
-				066BB829244ACD7200C607CC /* MainViewController.swift */,
-				066BB839244B0C1100C607CC /* ScrollViewController.swift */,
-				066BB83B244B0C1A00C607CC /* SignUpViewController.swift */,
+				0631934C246A88D5009144BB /* GlobalExtension */,
+				06319348246A8848009144BB /* Support */,
+				06319343246A8815009144BB /* Screens */,
 				0627BBD02455DCEA0054A19C /* UILabel+Extension.swift */,
-				066BB82E244ACD7200C607CC /* Assets.xcassets */,
-				066BB830244ACD7200C607CC /* LaunchScreen.storyboard */,
-				066BB833244ACD7200C607CC /* Info.plist */,
 			);
 			path = SOPT_iOS_Login;
 			sourceTree = "<group>";
@@ -144,11 +244,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0631934E246A899E009144BB /* FriendViewController.swift in Sources */,
+				06319356246A9148009144BB /* HeaderTableViewCell.swift in Sources */,
 				066BB83A244B0C1100C607CC /* ScrollViewController.swift in Sources */,
 				066BB82A244ACD7200C607CC /* MainViewController.swift in Sources */,
 				0627BBD12455DCEA0054A19C /* UILabel+Extension.swift in Sources */,
+				06319352246A8D5C009144BB /* MockFriendModel.swift in Sources */,
 				066BB826244ACD7200C607CC /* AppDelegate.swift in Sources */,
 				066BB83C244B0C1A00C607CC /* SignUpViewController.swift in Sources */,
+				06319354246A9107009144BB /* FriendTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +398,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7Z2CV7TB8R;
-				INFOPLIST_FILE = SOPT_iOS_Login/Info.plist;
+				INFOPLIST_FILE = SOPT_iOS_Login/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +416,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7Z2CV7TB8R;
-				INFOPLIST_FILE = SOPT_iOS_Login/Info.plist;
+				INFOPLIST_FILE = SOPT_iOS_Login/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

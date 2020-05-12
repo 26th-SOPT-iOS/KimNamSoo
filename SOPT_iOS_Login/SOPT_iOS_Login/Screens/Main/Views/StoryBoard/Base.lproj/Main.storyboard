@@ -433,7 +433,7 @@
         <!--친구-->
         <scene sceneID="boh-18-oc9">
             <objects>
-                <viewController id="Ut8-UY-x2K" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FriendVC" id="Ut8-UY-x2K" customClass="FriendViewController" customModule="SOPT_iOS_Login" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fCQ-Gp-hY3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -468,7 +468,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="38" id="fP3-YW-CuK">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="38" id="fP3-YW-CuK" customClass="HeaderTableViewCell" customModule="SOPT_iOS_Login" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fP3-YW-CuK" id="jdg-UR-Syu">
@@ -488,16 +488,20 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="friendCountLabel" destination="MOY-pa-NgU" id="qkh-2Q-Hfo"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="Zfb-r3-Vtn">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" rowHeight="60" id="Zfb-r3-Vtn" customClass="FriendTableViewCell" customModule="SOPT_iOS_Login" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="66" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zfb-r3-Vtn" id="vbC-oj-imW">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OEk-UE-QBw">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile2Img" translatesAutoresizingMaskIntoConstraints="NO" id="OEk-UE-QBw">
                                                     <rect key="frame" x="16" y="5" width="50" height="50"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="DYK-6r-Nf0"/>
                                                         <constraint firstAttribute="width" constant="50" id="YfS-LD-r8y"/>
@@ -518,14 +522,19 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Ij0-m1-hhD" firstAttribute="leading" secondItem="OEk-UE-QBw" secondAttribute="trailing" constant="22" id="BD6-sL-9j3"/>
+                                                <constraint firstItem="OEk-UE-QBw" firstAttribute="centerY" secondItem="vbC-oj-imW" secondAttribute="centerY" id="XRz-FZ-glS"/>
                                                 <constraint firstAttribute="trailing" secondItem="VKi-k2-6gd" secondAttribute="trailing" constant="27" id="oFZ-GR-zss"/>
                                                 <constraint firstItem="VKi-k2-6gd" firstAttribute="leading" secondItem="Ij0-m1-hhD" secondAttribute="trailing" constant="10" id="pL3-5e-MKQ"/>
                                                 <constraint firstItem="Ij0-m1-hhD" firstAttribute="centerY" secondItem="OEk-UE-QBw" secondAttribute="centerY" id="q9X-aI-DEI"/>
                                                 <constraint firstItem="VKi-k2-6gd" firstAttribute="centerY" secondItem="OEk-UE-QBw" secondAttribute="centerY" id="vRe-0F-I97"/>
                                                 <constraint firstItem="OEk-UE-QBw" firstAttribute="leading" secondItem="vbC-oj-imW" secondAttribute="leading" constant="16" id="vS1-bE-9hu"/>
-                                                <constraint firstItem="OEk-UE-QBw" firstAttribute="centerY" secondItem="vbC-oj-imW" secondAttribute="centerY" id="vzq-aA-Nkb"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptLabel" destination="VKi-k2-6gd" id="UIr-ej-Yu9"/>
+                                            <outlet property="nickNameLabel" destination="Ij0-m1-hhD" id="uGX-2e-WMc"/>
+                                            <outlet property="profilImgView" destination="OEk-UE-QBw" id="dfQ-pA-03c"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -542,7 +551,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gyH-Ff-JbD"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="친구" image="friendsUnselectedIc" selectedImage="person.fill" catalog="system" id="tDQ-HP-fje"/>
+                    <tabBarItem key="tabBarItem" title="친구" image="person" catalog="system" selectedImage="person.fill" id="tDQ-HP-fje"/>
+                    <connections>
+                        <outlet property="friendTableView" destination="0av-no-FcX" id="bnm-cX-r9P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HdE-nB-1dA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -554,6 +566,7 @@
                 <tabBarController storyboardIdentifier="TabBarC" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="jTQ-tk-xrD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jBe-XW-Kke">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -571,9 +584,10 @@
     <resources>
         <image name="814" width="20" height="20"/>
         <image name="SOPTLogo" width="203" height="68"/>
-        <image name="friendsUnselectedIc" width="20" height="23"/>
         <image name="homeUnselectedIc" width="24" height="24"/>
         <image name="oursoptBgImg" width="375" height="210"/>
+        <image name="person" catalog="system" width="64" height="58"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
+        <image name="profile2Img" width="50" height="50"/>
     </resources>
 </document>
