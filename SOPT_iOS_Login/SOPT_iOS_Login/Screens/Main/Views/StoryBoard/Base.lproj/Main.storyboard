@@ -468,12 +468,12 @@
                                     <constraint firstItem="mix-mM-3BE" firstAttribute="centerY" secondItem="1pB-PW-qTB" secondAttribute="centerY" id="oJ2-3e-guL"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0av-no-FcX">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0av-no-FcX">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="38" id="fP3-YW-CuK" customClass="HeaderTableViewCell" customModule="SOPT_iOS_Login" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="38"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="38" id="fP3-YW-CuK" customClass="HeaderTableViewCell" customModule="SOPT_iOS_Login" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="38"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fP3-YW-CuK" id="jdg-UR-Syu">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="38"/>
@@ -497,7 +497,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" rowHeight="60" id="Zfb-r3-Vtn" customClass="FriendTableViewCell" customModule="SOPT_iOS_Login" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="66" width="414" height="60"/>
+                                        <rect key="frame" x="0.0" y="93.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zfb-r3-Vtn" id="vbC-oj-imW">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>

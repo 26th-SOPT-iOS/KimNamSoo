@@ -16,6 +16,7 @@ class FriendViewController: UIViewController {
             friendTableView.reloadData()
         }
     }
+    lazy var myImg = UIImage(named: "myImg")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,22 +91,6 @@ extension FriendViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    /*
-    기본 시스템 사용시
-     
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .delete
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-    }
-    */
-    
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let deleteAction = UIContextualAction(style: .destructive, title: "잘가시츄..") { (action, view, success ) in
@@ -116,5 +101,54 @@ extension FriendViewController: UITableViewDataSource, UITableViewDelegate {
         return config
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let view = UIView()
+        let underLine = UIView()
+        underLine.backgroundColor = #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1)
+        let profileImg = setupProfileImgView()
+        let nickLabel = setupNickLabel()
+        
+        view.addSubview(underLine)
+        view.addSubview(profileImg)
+        view.addSubview(nickLabel)
+        
+        nickLabel.translatesAutoresizingMaskIntoConstraints = false
+        profileImg.translatesAutoresizingMaskIntoConstraints = false
+        underLine.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            profileImg.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            profileImg.widthAnchor.constraint(equalToConstant: 60),
+            profileImg.heightAnchor.constraint(equalToConstant: 60),
+            profileImg.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            nickLabel.leadingAnchor.constraint(equalTo: profileImg.trailingAnchor, constant: 13),
+            nickLabel.centerYAnchor.constraint(equalTo: profileImg.centerYAnchor),
+            underLine.heightAnchor.constraint(equalToConstant: 0.5),
+            underLine.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            underLine.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            underLine.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+        
+        return view
+    }
+    
+    func setupProfileImgView() -> UIImageView {
+        let imgView = UIImageView()
+        imgView.image = myImg
+        imgView.contentMode = .scaleAspectFill
+        return imgView
+    }
+    
+    func setupNickLabel() -> UILabel {
+        let label = UILabel()
+        label.text = "김남수"
+        label.font = .systemFont(ofSize: 17, weight: .bold)
+        label.textColor = #colorLiteral(red: 0.1529411765, green: 0.1529411765, blue: 0.1529411765, alpha: 1)
+        return label
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 88
+    }
 }
 
