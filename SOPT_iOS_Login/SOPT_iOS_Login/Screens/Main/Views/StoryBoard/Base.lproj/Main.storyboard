@@ -418,7 +418,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0if-Qn-PRf"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="홈" image="homeUnselectedIc" id="N1F-dF-nNM"/>
+                    <tabBarItem key="tabBarItem" title="홈" image="homeUnselectedIc" selectedImage="homeSelectedIc" id="N1F-dF-nNM"/>
                     <navigationItem key="navigationItem" id="7Eg-Oj-Ltb"/>
                     <connections>
                         <outlet property="imgViewHeightLayout" destination="TvJ-oy-dfX" id="N8R-zI-b4d"/>
@@ -584,6 +584,7 @@
     <resources>
         <image name="814" width="20" height="20"/>
         <image name="SOPTLogo" width="203" height="68"/>
+        <image name="homeSelectedIc" width="24" height="24"/>
         <image name="homeUnselectedIc" width="24" height="24"/>
         <image name="oursoptBgImg" width="375" height="210"/>
         <image name="person" catalog="system" width="64" height="58"/>

@@ -32,20 +32,27 @@ struct MockHeader: MockType {
 struct MockFriendList {
     let sampleImg1: UIImage
     let sampleImg2: UIImage
-    let data: [MockFriend]
-    init() {
+    var data: [MockFriend] = []
+    
+    init(num: Int) {
         sampleImg1 = UIImage(named: "profile1Img")!
         sampleImg2 = UIImage(named: "profile2Img")!
-        data = [
-            MockFriend(type: .friend, profilImg: sampleImg1, nickName: "시츄시츄", descript: "왈! 왈! 왈!"),
-            MockFriend(type: .friend, profilImg: sampleImg2, nickName: "시츄시츄", descript: "머! 머! 머!"),
-            MockFriend(type: .friend, profilImg: sampleImg1, nickName: "시츄시츄", descript: "뭐! 뭐! 뭐!"),
-            MockFriend(type: .friend, profilImg: sampleImg2, nickName: "시츄시츄", descript: "머1! 머! 머!"),
-            MockFriend(type: .friend, profilImg: sampleImg1, nickName: "시츄시츄", descript: "머2! 머! 머!"),
-            MockFriend(type: .friend, profilImg: sampleImg2, nickName: "시츄시츄", descript: "머3! 머! 머!"),
-            MockFriend(type: .friend, profilImg: sampleImg1, nickName: "시츄시츄", descript: "머4! 머! 머!"),
-            MockFriend(type: .friend, profilImg: sampleImg2, nickName: "시츄시츄", descript: "머5! 머! 머!"),
-            MockFriend(type: .friend, profilImg: sampleImg1, nickName: "시츄시츄", descript: "머6! 머! 머!")
-        ]
+        data = generateMock(num: num)
+    }
+    
+    func generateMock(num: Int) -> [MockFriend] {
+        var array: [MockFriend] = []
+        for _ in 0..<num {
+            array += [
+                MockFriend(type: .friend, profilImg: sampleImg1, nickName: "시츄시츄", descript: "왈! 왈! 왈!"),
+                MockFriend(type: .friend, profilImg: sampleImg2, nickName: "시츄시츄", descript: "머! 머! 머!"),
+                MockFriend(type: .friend, profilImg: sampleImg1, nickName: "시츄시츄", descript: "뭐! 뭐! 뭐!"),
+                MockFriend(type: .friend, profilImg: sampleImg2, nickName: "시츄시츄", descript: "머1! 머! 머!"),
+                MockFriend(type: .friend, profilImg: sampleImg1, nickName: "시츄시츄", descript: "머2! 머! 머!"),
+                MockFriend(type: .friend, profilImg: sampleImg2, nickName: "시츄시츄", descript: "머3! 머! 머!"),
+                MockFriend(type: .friend, profilImg: sampleImg1, nickName: "시츄시츄", descript: "머4! 머! 머!"),
+            ]
+        }
+        return array
     }
 }

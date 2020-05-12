@@ -21,7 +21,7 @@ class FriendViewController: UIViewController {
     }
     
     func fetchSampleData() {
-        mockData = MockFriendList().data
+        mockData = MockFriendList(num: 4).data
         let headerData = MockHeader(type: .header, friendNum: mockData.count)
         mockData.insert(headerData, at: 0)
     }
