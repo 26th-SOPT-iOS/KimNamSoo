@@ -441,27 +441,31 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1IZ-03-i4Q">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="814" translatesAutoresizingMaskIntoConstraints="NO" id="xLh-f3-53z">
-                                        <rect key="frame" x="378" y="16.5" width="20" height="20"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="4P4-nw-tUK"/>
-                                            <constraint firstAttribute="width" constant="20" id="Vvw-2Q-5f1"/>
-                                        </constraints>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="친구" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pB-PW-qTB">
                                         <rect key="frame" x="16" y="13" width="38.5" height="26.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" red="0.15294117647058825" green="0.15294117647058825" blue="0.035294117647058823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mix-mM-3BE">
+                                        <rect key="frame" x="378" y="16.5" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="ayK-zR-Es6"/>
+                                            <constraint firstAttribute="height" constant="20" id="rBl-Jk-t5s"/>
+                                        </constraints>
+                                        <state key="normal" image="814"/>
+                                        <connections>
+                                            <action selector="settingClick:" destination="Ut8-UY-x2K" eventType="touchUpInside" id="6UR-Tx-eFP"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="xLh-f3-53z" firstAttribute="centerY" secondItem="1pB-PW-qTB" secondAttribute="centerY" id="2pq-zH-ybB"/>
-                                    <constraint firstAttribute="trailing" secondItem="xLh-f3-53z" secondAttribute="trailing" constant="16" id="FPz-cS-tSS"/>
+                                    <constraint firstAttribute="trailing" secondItem="mix-mM-3BE" secondAttribute="trailing" constant="16" id="5QG-6o-t9H"/>
                                     <constraint firstItem="1pB-PW-qTB" firstAttribute="top" secondItem="1IZ-03-i4Q" secondAttribute="top" constant="13" id="N9p-yZ-8Vu"/>
                                     <constraint firstAttribute="height" constant="44" id="Psh-7D-tU5"/>
                                     <constraint firstItem="1pB-PW-qTB" firstAttribute="leading" secondItem="1IZ-03-i4Q" secondAttribute="leading" constant="16" id="c8u-k4-PKm"/>
+                                    <constraint firstItem="mix-mM-3BE" firstAttribute="centerY" secondItem="1pB-PW-qTB" secondAttribute="centerY" id="oJ2-3e-guL"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0av-no-FcX">

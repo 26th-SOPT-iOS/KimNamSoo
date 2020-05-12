@@ -11,7 +11,11 @@ import UIKit
 class FriendViewController: UIViewController {
 
     @IBOutlet weak var friendTableView: UITableView!
-    var mockData: [MockType] = []
+    var mockData: [MockType] = [] {
+        willSet {
+            friendTableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +28,24 @@ class FriendViewController: UIViewController {
         mockData = MockFriendList(num: 4).data
         let headerData = MockHeader(type: .header, friendNum: mockData.count)
         mockData.insert(headerData, at: 0)
+    }
+    
+    func generateActionSheet() {
+        let sheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let managerAction = UIAlertAction(title: "친구관리", style: .default, handler: nil)
+        let setAllAction = UIAlertAction(title: "전체설정", style: .default, handler: nil)
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+    
+        sheet.addAction(managerAction)
+        sheet.addAction(setAllAction)
+        sheet.addAction(cancel)
+        
+        present(sheet, animated: true)
+    }
+    
+    @IBAction func settingClick(_ sender: Any) {
+        generateActionSheet()
     }
 }
 
@@ -67,5 +89,32 @@ extension FriendViewController: UITableViewDataSource, UITableViewDelegate {
             return 0
         }
     }
+    
+    /*
+    기본 시스템 사용시
+     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+    }
+    */
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "잘가시츄..") { (action, view, success ) in
+            self.mockData.remove(at: indexPath.row)
+        }
+        let config = UISwipeActionsConfiguration(actions: [deleteAction])
+        config.performsFirstActionWithFullSwipe = false
+        return config
+    }
+    
 }
 
