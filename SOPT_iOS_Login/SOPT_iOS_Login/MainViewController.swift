@@ -33,7 +33,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func loginClick(_ sender: Any) {
-        guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "ScrollVC") as? ScrollViewController else {
+        guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "TabBarC") else {
             return
         }
         present(nextVC, animated: true)
