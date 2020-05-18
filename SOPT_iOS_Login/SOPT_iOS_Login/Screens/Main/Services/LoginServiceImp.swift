@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 struct LoginServiceImp: LoginServiceProtocol {
-    func requestSignUp(form: SignUpForm) {
+    func requestSignUp(form: SignUpForm, completion: @escaping (DataResponseType<HttpStatusCode>) -> Void) {
         
         var urlComponent = URLComponents(string: BaseURL.shared.getBaseString())
         urlComponent?.path = RequestURL.signUp.getURLString
@@ -34,13 +34,17 @@ struct LoginServiceImp: LoginServiceProtocol {
             .validate(statusCode: 200..<500)
             .responseDecodable(of: SimpleResponse<String>.self) { response in
                 print("--response")
-                
                 switch response.result {
                 case .success:
-                    print(response.value)
-                    print(response.value?.message)
+                    guard let code = response.value?.status,
+                        let httpCode = HttpStatusCode(rawValue: code) else {
+                            completion(.failed(NSError(domain: "StatusCode Err", code: 0, userInfo: nil)))
+                            return
+                    }
+                    completion(.success(httpCode))
                 case .failure(let err):
                     print(err)
+                    completion(.failed(err))
                 }
         }
     }

@@ -9,5 +9,6 @@
 import Foundation
 
 protocol LoginServiceProtocol {
-    func requestSignUp(form: SignUpForm)
+    func requestSignUp(form: SignUpForm, completion: @escaping (DataResponseType<HttpStatusCode>) -> Void)
 }
+

@@ -15,7 +15,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
-    let service: LoginServiceProtocol = LoginServiceImp()
+    var service: LoginServiceProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,21 +28,35 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signUpCompleteClick(_ sender: Any) {
         
-        guard idTextField.hasText ||
-            pwTextField.hasText ||
-            nameTextField.hasText ||
-            emailTextField.hasText ||
+        guard idTextField.hasText &&
+            pwTextField.hasText &&
+            nameTextField.hasText &&
+            emailTextField.hasText &&
             phoneTextField.hasText else {
-                
-                let alert = UIAlertController(title: nil, message: "빈칸을 채워주세요", preferredStyle: .alert)
-                let cancel = UIAlertAction(title: "Cancel", style: .cancel)
-                alert.addAction(cancel)
-                present(alert, animated: true)
+                simpleAlert(title: nil, msg: "빈칸을 채워주세요")
                 return
         }
         let form = SignUpForm(id: idTextField.text, pw: pwTextField.text, name: nameTextField.text, email: emailTextField.text, phone: phoneTextField.text)
         
-        service.requestSignUp(form: form)
+        service.requestSignUp(form: form) { result in
+            switch result {
+            case .success(let statusCode):
+                DispatchQueue.main.async {
+                    switch statusCode {
+                    case .existId:
+                        self.simpleAlert(title: "이미 아이디가 존재합니다.", msg: nil)
+                    case .success:
+                        self.simpleAlert(title: "회원 가입 성공", msg: nil)
+                    case .serverError:
+                        self.simpleAlert(title: "서버오류", msg: nil)
+                    default:
+                        break
+                    }
+                }
+            case .failed(let err):
+                print(err)
+            }
+        }
         
     }
 }

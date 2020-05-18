@@ -15,6 +15,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var autoLoginCheckBox: UIView!
     @IBOutlet weak var autoLoginButton: UIButton!
     
+    let service: LoginServiceProtocol = LoginServiceImp()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationColor()
@@ -55,6 +57,16 @@ class MainViewController: UIViewController {
     @IBAction func loginClick(_ sender: Any) {
         let isAutoLogin = autoLoginButton.isSelected
         
+        guard emailTextField.hasText &&
+            pwTextField.hasText else {
+                return
+        }
+        
+        let email = emailTextField.text
+        let pw = pwTextField.text
+        
+        
+        
         if isAutoLogin {
             UserDefaults.standard.set(true, forKey: UserDefaultName.isAutoLogin.rawValue)
         }
@@ -69,6 +81,7 @@ class MainViewController: UIViewController {
         guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "SignUpVC") as? SignUpViewController else {
             return
         }
+        nextVC.service = service
         navigationController?.pushViewController(nextVC, animated: true)
     }
     
