@@ -24,12 +24,8 @@ class ScrollViewController: UIViewController {
     }
     
     @IBAction func logoutClick(_ sender: Any) {
-        // present -> dismiss, push -> pop
-        dismiss(animated: true) {
-             if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
-                (appDelegate.window?.rootViewController as? UINavigationController)?.popToRootViewController(animated: true)
-            }
-        }
+        UserDefaults.standard.set(false, forKey: UserDefaultName.isAutoLogin.rawValue)
+        dismiss(animated: true)
     }
 }
 

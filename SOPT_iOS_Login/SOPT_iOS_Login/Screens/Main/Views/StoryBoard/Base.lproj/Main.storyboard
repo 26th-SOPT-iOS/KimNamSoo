@@ -481,14 +481,25 @@
                                     <constraint firstItem="zxV-NX-SAG" firstAttribute="top" secondItem="ZqY-7j-Yle" secondAttribute="top" id="xcp-B4-lss"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0i-PH-csS">
+                                <rect key="frame" x="343" y="44" width="51" height="30"/>
+                                <state key="normal" title="LogOut">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutClick:" destination="tZ9-ce-pso" eventType="touchUpInside" id="MR2-mo-RZM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="0if-Qn-PRf" firstAttribute="trailing" secondItem="ZqY-7j-Yle" secondAttribute="trailing" id="9fu-aN-hK1"/>
                             <constraint firstAttribute="bottom" secondItem="ZqY-7j-Yle" secondAttribute="bottom" id="D53-Ks-53E"/>
                             <constraint firstItem="0if-Qn-PRf" firstAttribute="top" secondItem="HeF-EZ-OQ3" secondAttribute="top" constant="44" id="QPe-LR-T0e"/>
+                            <constraint firstItem="0if-Qn-PRf" firstAttribute="trailing" secondItem="c0i-PH-csS" secondAttribute="trailing" constant="20" id="UUW-lJ-s85"/>
                             <constraint firstItem="ZqY-7j-Yle" firstAttribute="top" secondItem="3eh-EB-NPy" secondAttribute="top" id="nDg-2U-BXd"/>
                             <constraint firstItem="ZqY-7j-Yle" firstAttribute="leading" secondItem="0if-Qn-PRf" secondAttribute="leading" id="t2a-qc-WmX"/>
+                            <constraint firstItem="c0i-PH-csS" firstAttribute="top" secondItem="0if-Qn-PRf" secondAttribute="top" id="wIk-st-f9J"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0if-Qn-PRf"/>
                     </view>

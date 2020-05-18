@@ -19,9 +19,19 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        isAutoLogin()
         setNavigationColor()
         signUpLabel.underLine()
         setupCheckBox()
+    }
+    
+    func isAutoLogin() {
+        if UserDefaults.standard.bool(forKey: UserDefaultName.isAutoLogin.rawValue) {
+            guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "TabBarC") else {
+                return
+            }
+            present(nextVC, animated: true)
+        }
     }
     
     func setNavigationColor() {
@@ -55,8 +65,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func loginClick(_ sender: Any) {
-        let isAutoLogin = autoLoginButton.isSelected
-        
+
         guard emailTextField.hasText &&
             pwTextField.hasText else {
                 return
@@ -66,7 +75,7 @@ class MainViewController: UIViewController {
             let pw = pwTextField.text else {
                 return
         }
-        
+        let isAutoLogin = autoLoginButton.isSelected
         service.requestLogin(id: id, pw: pw) { result in
             DispatchQueue.main.async {
                 
