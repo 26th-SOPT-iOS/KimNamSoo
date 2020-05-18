@@ -10,7 +10,7 @@ import Foundation
 
 struct SimpleResponse<T: Codable>: Codable {
     let status: Int?
-    let success: String?
+    let success: Bool?
     let message: String?
     let data: T?
     
@@ -21,7 +21,7 @@ struct SimpleResponse<T: Codable>: Codable {
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         status = (try? values.decode(Int.self, forKey: .status)) ?? nil
-        success = (try? values.decode(String.self, forKey: .success)) ?? nil
+        success = (try? values.decode(Bool.self, forKey: .success)) ?? nil
         message = (try? values.decode(String.self, forKey: .message)) ?? nil
         data = (try? values.decode(T.self, forKey: .data)) ?? nil
     }

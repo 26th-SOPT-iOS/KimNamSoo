@@ -62,21 +62,32 @@ class MainViewController: UIViewController {
                 return
         }
         
-        let email = emailTextField.text
-        let pw = pwTextField.text
-        
-        
-        
-        if isAutoLogin {
-            UserDefaults.standard.set(true, forKey: UserDefaultName.isAutoLogin.rawValue)
+        guard let id = emailTextField.text,
+            let pw = pwTextField.text else {
+                return
         }
         
-        guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "TabBarC") else {
-            return
+        service.requestLogin(id: id, pw: pw) { result in
+            DispatchQueue.main.async {
+                
+                switch result {
+                case .success(let token):
+                    if isAutoLogin {
+                        UserDefaults.standard.set(true, forKey: UserDefaultName.isAutoLogin.rawValue)
+                    }
+                    print(token)
+                    guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "TabBarC") else {
+                        return
+                    }
+                    self.present(nextVC, animated: true)
+                case .failed(let err):
+                    print(err)
+                    self.simpleAlert(title: "로그인 실패", msg: "아이디와 비번을 다시 확인해주세요.")
+                }
+            }
         }
-        present(nextVC, animated: true)
     }
-  
+    
     @IBAction func signUpClick(_ sender: Any) {
         guard let nextVC = storyboard?.instantiateViewController(withIdentifier: "SignUpVC") as? SignUpViewController else {
             return
