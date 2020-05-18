@@ -97,7 +97,7 @@
                             </view>
                             <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="waL-c2-uTf">
                                 <rect key="frame" x="38" y="392" width="15" height="15"/>
-                                <color key="backgroundColor" red="0.56765526311425751" green="0.44986067786639417" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="15" id="mh2-uZ-qpF"/>
                                     <constraint firstAttribute="height" constant="15" id="oUF-JT-uQM"/>
@@ -111,6 +111,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UT-gD-jE5">
                                 <rect key="frame" x="38" y="392" width="65" height="15"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="autoLoginClick:" destination="IHd-z0-ACa" eventType="touchUpInside" id="ZhC-xK-KZG"/>
                                 </connections>
@@ -153,6 +154,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="U5u-fu-LQv"/>
                     <connections>
+                        <outlet property="autoLoginButton" destination="9UT-gD-jE5" id="Zah-hn-tky"/>
                         <outlet property="autoLoginCheckBox" destination="waL-c2-uTf" id="TXj-ho-6Uf"/>
                         <outlet property="emailTextField" destination="4n8-kM-kUV" id="ieM-lz-vQl"/>
                         <outlet property="pwTextField" destination="bKf-Z6-TTa" id="kap-jO-fuo"/>
